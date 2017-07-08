@@ -26,7 +26,7 @@ public final class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     final boolean SIEMPREENCIMA = true;
-    final boolean MODIFICARTAMAÑO = false;
+    final boolean MODIFICARTAMAÑO = true;
     final String ICONO = "src/image/BPSA.png";
     final String NOMBRE = "BPSA: Inicio";
     final String ICOLOGO = "src/image/BPSAnombre.png";
