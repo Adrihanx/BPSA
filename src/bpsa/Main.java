@@ -342,7 +342,7 @@ public final class Main extends javax.swing.JFrame {
             .addGroup(InferiorLayout.createSequentialGroup()
                 .addGroup(InferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(InferiorLayout.createSequentialGroup()
-                        .addGap(290, 290, 290)
+                        .addGap(276, 276, 276)
                         .addComponent(BPSAicologo, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(161, 161, 161))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InferiorLayout.createSequentialGroup()
@@ -387,6 +387,11 @@ public final class Main extends javax.swing.JFrame {
         );
 
         Articuloes.setText("Articulos");
+        Articuloes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArticuloesActionPerformed(evt);
+            }
+        });
 
         Solicitudes.setText("Solicitudes");
         Solicitudes.addActionListener(new java.awt.event.ActionListener() {
@@ -481,6 +486,12 @@ public final class Main extends javax.swing.JFrame {
         solicitudes.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_SolicitudesActionPerformed
+
+    private void ArticuloesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArticuloesActionPerformed
+        Articulos articulos = new Articulos();
+        articulos.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ArticuloesActionPerformed
 
     /**
      * @param args the command line arguments
