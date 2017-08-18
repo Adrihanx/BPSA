@@ -27,16 +27,17 @@ public final class Main extends javax.swing.JFrame {
      * Creates new form Main, Constantes para una mejor modificación del
      * sistema.
      */
-    final boolean SIEMPREENCIMA = true;
-    final boolean MODIFICARTAMAÑO = true;
-    final String ICONO = "src/image/BPSA.png";
-    final String NOMBRE = "BPSA: Inicio";
-    final String ICOLOGO = "src/image/BPSAnombre.png";
-    final String QUIENESSOMOS = "src/icon/people-8x.png";
-    final String POLITICASDEVENTA = "src/icon/lock-locked-8x.png";
-    final String TERMINOSYCONDICIONES = "src/icon/document-8x.png";
-    final String AYUDA = "src/icon/question-mark-8x.png";
-    final String TELEFONO = "src/icon/bullhorn-8x.png";
+    public final boolean SIEMPREENCIMA = true;
+    public final boolean MODIFICARTAMAÑO = false;
+    public final String ICONO = "src/image/BPSA.png";
+    public final String NOMBRE = "BPSA: Usuario";
+    public final String ICOLOGO = "src/image/BPSAnombre.png";
+    public final String QUIENESSOMOS = "src/icon/people-8x.png";
+    public final String USUARIO = "src/icon/person-8x.png";
+    public final String POLITICASDEVENTA = "src/icon/lock-locked-8x.png";
+    public final String TERMINOSYCONDICIONES = "src/icon/document-8x.png";
+    public final String AYUDA = "src/icon/question-mark-8x.png";
+    public final String TELEFONO = "src/icon/bullhorn-8x.png";
 
     public Main() {
         try {
@@ -66,7 +67,7 @@ public final class Main extends javax.swing.JFrame {
         ITerminosyCondiciones.setIcon(icon(TERMINOSYCONDICIONES, ITerminosyCondiciones));
         IAyuda.setIcon(icon(AYUDA, IAyuda));
         Itelefono.setIcon(icon(TELEFONO, Itelefono));
-
+        Usuario.setIcon(icon(USUARIO,Usuario));
     }
 
     public Icon icon(String ICONO, JLabel a) {
@@ -87,9 +88,8 @@ public final class Main extends javax.swing.JFrame {
 
         Main = new javax.swing.JPanel();
         BPSAlogo = new javax.swing.JLabel();
-        BarraBotones = new javax.swing.JPanel();
-        Ayuda = new javax.swing.JButton();
-        Ingresar = new javax.swing.JButton();
+        BarraBotones2 = new javax.swing.JPanel();
+        Usuario = new javax.swing.JLabel();
         Inferior = new javax.swing.JPanel();
         BPSAicologo = new javax.swing.JLabel();
         AccesosDirecto = new javax.swing.JPanel();
@@ -110,43 +110,34 @@ public final class Main extends javax.swing.JFrame {
         Telefono = new javax.swing.JPanel();
         Itelefono = new javax.swing.JLabel();
         Texto7 = new javax.swing.JLabel();
+        BarraBotones = new javax.swing.JPanel();
+        Ayuda = new javax.swing.JButton();
+        Inicio = new javax.swing.JButton();
+        BarraBotones1 = new javax.swing.JPanel();
+        Articuloes = new javax.swing.JButton();
+        Solicitudes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setType(java.awt.Window.Type.POPUP);
 
-        Main.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-
         BPSAlogo.setText("BPSALogo");
         BPSAlogo.setAlignmentY(0.0F);
 
-        BarraBotones.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Usuario.setText("Usuario");
+        Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        Ayuda.setText("Ayuda");
-
-        Ingresar.setText("Ingresar");
-
-        javax.swing.GroupLayout BarraBotonesLayout = new javax.swing.GroupLayout(BarraBotones);
-        BarraBotones.setLayout(BarraBotonesLayout);
-        BarraBotonesLayout.setHorizontalGroup(
-            BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarraBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(Ayuda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout BarraBotones2Layout = new javax.swing.GroupLayout(BarraBotones2);
+        BarraBotones2.setLayout(BarraBotones2Layout);
+        BarraBotones2Layout.setHorizontalGroup(
+            BarraBotones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarraBotones2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Usuario))
         );
-        BarraBotonesLayout.setVerticalGroup(
-            BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BarraBotonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ayuda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Ingresar, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
-                .addContainerGap())
+        BarraBotones2Layout.setVerticalGroup(
+            BarraBotones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Usuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        Inferior.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         BPSAicologo.setText("jLabel1");
 
@@ -266,7 +257,7 @@ public final class Main extends javax.swing.JFrame {
             .addGroup(Ayuda2Layout.createSequentialGroup()
                 .addComponent(IAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(Texto4, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+                .addComponent(Texto4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Ayuda2Layout.setVerticalGroup(
             Ayuda2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -349,13 +340,16 @@ public final class Main extends javax.swing.JFrame {
         InferiorLayout.setHorizontalGroup(
             InferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(InferiorLayout.createSequentialGroup()
-                .addGap(161, 161, 161)
-                .addComponent(BPSAicologo, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(161, 161, 161))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InferiorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AccesosDirecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(InferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InferiorLayout.createSequentialGroup()
+                        .addGap(290, 290, 290)
+                        .addComponent(BPSAicologo, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(161, 161, 161))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InferiorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(AccesosDirecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         InferiorLayout.setVerticalGroup(
             InferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,30 +361,98 @@ public final class Main extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        Ayuda.setText("Ayuda");
+
+        Inicio.setText("Inicio");
+
+        javax.swing.GroupLayout BarraBotonesLayout = new javax.swing.GroupLayout(BarraBotones);
+        BarraBotones.setLayout(BarraBotonesLayout);
+        BarraBotonesLayout.setHorizontalGroup(
+            BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarraBotonesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Inicio, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(Ayuda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        BarraBotonesLayout.setVerticalGroup(
+            BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarraBotonesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BarraBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Ayuda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Inicio, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        Articuloes.setText("Articulos");
+
+        Solicitudes.setText("Solicitudes");
+        Solicitudes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SolicitudesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BarraBotones1Layout = new javax.swing.GroupLayout(BarraBotones1);
+        BarraBotones1.setLayout(BarraBotones1Layout);
+        BarraBotones1Layout.setHorizontalGroup(
+            BarraBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BarraBotones1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Solicitudes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Articuloes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
+        );
+        BarraBotones1Layout.setVerticalGroup(
+            BarraBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarraBotones1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BarraBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Articuloes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Solicitudes, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout MainLayout = new javax.swing.GroupLayout(Main);
         Main.setLayout(MainLayout);
         MainLayout.setHorizontalGroup(
             MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLayout.createSequentialGroup()
-                .addGap(255, 255, 255)
-                .addComponent(BPSAlogo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(255, 255, 255))
-            .addGroup(MainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BarraBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Inferior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
+                    .addGroup(MainLayout.createSequentialGroup()
+                        .addComponent(Inferior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(MainLayout.createSequentialGroup()
+                        .addComponent(BarraBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MainLayout.createSequentialGroup()
+                                .addGap(18, 18, Short.MAX_VALUE)
+                                .addComponent(BPSAlogo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(324, 324, 324))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BarraBotones1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BarraBotones2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         MainLayout.setVerticalGroup(
             MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainLayout.createSequentialGroup()
-                .addComponent(BarraBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BPSAlogo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(MainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BarraBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BarraBotones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BarraBotones2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(1, 1, 1)
+                .addComponent(BPSAlogo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Inferior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -398,7 +460,7 @@ public final class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addContainerGap()
                 .addComponent(Main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
@@ -413,6 +475,12 @@ public final class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SolicitudesActionPerformed
+        Solicitudes solicitudes = new Solicitudes();
+        solicitudes.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_SolicitudesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -452,38 +520,34 @@ public final class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AccesosDirecto;
+    private javax.swing.JButton Articuloes;
     private javax.swing.JButton Ayuda;
     private javax.swing.JPanel Ayuda2;
     private javax.swing.JLabel BPSAicologo;
     private javax.swing.JLabel BPSAlogo;
     private javax.swing.JPanel BarraBotones;
+    private javax.swing.JPanel BarraBotones1;
+    private javax.swing.JPanel BarraBotones2;
     private javax.swing.JPanel Contacto;
-    private javax.swing.JPanel Dato1;
-    private javax.swing.JPanel Dato5;
-    private javax.swing.JPanel Dato6;
     private javax.swing.JLabel IAyuda;
     private javax.swing.JLabel IPoliticasdeVenta;
     private javax.swing.JLabel IQuienesSomos;
     private javax.swing.JLabel ITerminosyCondiciones;
-    private javax.swing.JLabel Icono1;
-    private javax.swing.JLabel Icono5;
-    private javax.swing.JLabel Icono6;
     private javax.swing.JPanel Inferior;
-    private javax.swing.JButton Ingresar;
+    private javax.swing.JButton Inicio;
     private javax.swing.JLabel Itelefono;
     private javax.swing.JPanel LigasAdicionales;
     private javax.swing.JPanel Main;
     private javax.swing.JPanel PoliticasdeVenta;
     private javax.swing.JPanel QuienesSomos;
+    private javax.swing.JButton Solicitudes;
     private javax.swing.JPanel Telefono;
     private javax.swing.JPanel TerminosyCondiciones;
     private javax.swing.JLabel Texto;
-    private javax.swing.JLabel Texto1;
     private javax.swing.JLabel Texto2;
     private javax.swing.JLabel Texto3;
     private javax.swing.JLabel Texto4;
-    private javax.swing.JLabel Texto5;
-    private javax.swing.JLabel Texto6;
     private javax.swing.JLabel Texto7;
+    private javax.swing.JLabel Usuario;
     // End of variables declaration//GEN-END:variables
 }
