@@ -16,6 +16,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.UIManager;
+
 /**
  *
  * @author alanantonio
@@ -23,7 +24,8 @@ import javax.swing.UIManager;
 public final class Main extends javax.swing.JFrame {
 
     /**
-     * Creates new form Main
+     * Creates new form Main, Constantes para una mejor modificación del
+     * sistema.
      */
     final boolean SIEMPREENCIMA = true;
     final boolean MODIFICARTAMAÑO = true;
@@ -35,46 +37,45 @@ public final class Main extends javax.swing.JFrame {
     final String TERMINOSYCONDICIONES = "src/icon/document-8x.png";
     final String AYUDA = "src/icon/question-mark-8x.png";
     final String TELEFONO = "src/icon/bullhorn-8x.png";
+
     public Main() {
-         try 
-    {
-      JFrame.setDefaultLookAndFeelDecorated(true);
-      JDialog.setDefaultLookAndFeelDecorated(true);
-      UIManager.setLookAndFeel(new SyntheticaPlainLookAndFeel());
-    } 
-    catch (Exception e) 
-    {
-      e.printStackTrace();
-    }
-                 initComponents();
+        try {
+            JFrame.setDefaultLookAndFeelDecorated(true);
+            JDialog.setDefaultLookAndFeelDecorated(true);
+            UIManager.setLookAndFeel(new SyntheticaPlainLookAndFeel());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        initComponents();
         properties();
     }
-    public void properties(){
+
+    public void properties() {
         this.setTitle(NOMBRE);
         this.setResizable(MODIFICARTAMAÑO);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setAlwaysOnTop(SIEMPREENCIMA);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                ImageIcon icono = new ImageIcon(ICONO);
+        ImageIcon icono = new ImageIcon(ICONO);
         this.setIconImage(icono.getImage());
         this.setLocationRelativeTo(null);
-        BPSAlogo.setIcon(icon(ICONO,BPSAlogo));
-        BPSAicologo.setIcon(icon(ICOLOGO,BPSAicologo));
-        IQuienesSomos.setIcon(icon(QUIENESSOMOS,IQuienesSomos));
-        IPoliticasdeVenta.setIcon(icon(POLITICASDEVENTA,IPoliticasdeVenta));
-        ITerminosyCondiciones.setIcon(icon(TERMINOSYCONDICIONES,ITerminosyCondiciones));
-        IAyuda.setIcon(icon(AYUDA,IAyuda));
-        Itelefono.setIcon(icon(TELEFONO,Itelefono));
-     
- 
+        BPSAlogo.setIcon(icon(ICONO, BPSAlogo));
+        BPSAicologo.setIcon(icon(ICOLOGO, BPSAicologo));
+        IQuienesSomos.setIcon(icon(QUIENESSOMOS, IQuienesSomos));
+        IPoliticasdeVenta.setIcon(icon(POLITICASDEVENTA, IPoliticasdeVenta));
+        ITerminosyCondiciones.setIcon(icon(TERMINOSYCONDICIONES, ITerminosyCondiciones));
+        IAyuda.setIcon(icon(AYUDA, IAyuda));
+        Itelefono.setIcon(icon(TELEFONO, Itelefono));
 
     }
-    public Icon icon(String ICONO,JLabel a){
-        ImageIcon fot = new ImageIcon(ICONO);  
+
+    public Icon icon(String ICONO, JLabel a) {
+        ImageIcon fot = new ImageIcon(ICONO);
         a.setText("");
         Icon icono = new ImageIcon(fot.getImage().getScaledInstance(a.getWidth(), a.getHeight(), Image.SCALE_DEFAULT));
         return icono;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -443,8 +444,8 @@ public final class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);  
-                
+                new Main().setVisible(true);
+
             }
         });
     }
